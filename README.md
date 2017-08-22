@@ -1,4 +1,4 @@
-# Demo for 1-Wire Temperature, Humidity and Light Sensor https://taaralabs.eu/ol1
+# Demo for 1-Wire Temperature, Humidity and Light Sensor
 
 [1-WireHumidityLight Website](https://taaralabs.eu/ol1)
 
