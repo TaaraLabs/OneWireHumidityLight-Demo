@@ -1,5 +1,5 @@
 /* 
- * Queries and shows the following data from the DS2438 1-Wire chip:
+ * Arduino demo sketch that queries and shows the following data from the DS2438 1-Wire chip:
  * - VAD voltage between pin 1 and 4 (GND and VAD) connected to the analog humidity sensor;
  * - Internal temperature;
  * - IAD voltage between pin 2 and 3 (vsens+ and vsens-) in millivolts connected to the shunt resistor and the photodiode;
@@ -135,7 +135,7 @@ void loop(void) {
   Serial.print(" Hum=");
   float stdHum = ((vad / vdd) - 0.16) / 0.0062;
   float trueHum = stdHum / (1.0546 - (0.00216 * temp));
-  Serial.print(stdHum);
+  Serial.print(trueHum);
   
   Serial.println();
 }
