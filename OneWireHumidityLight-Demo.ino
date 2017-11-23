@@ -128,6 +128,12 @@ void loop(void) {
     data[i] = ds.read();
   }
 
+  // CRC
+  if ( OneWire::crc8(data, 8) != data[8]) {
+    Serial.println("CRC is not valid!");
+    return;
+  }
+  
   Serial.print(" VDD=");
   float vdd = ((((int16_t)data[4]) << 8) | data[3]) * 0.01;
   Serial.print(vdd);
